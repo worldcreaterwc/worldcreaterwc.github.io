@@ -3,15 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "build": "hexo generate"
   },
   "hexo": {
     "version": "7.1.1"
   },
   "dependencies": {
+    "@neilsustc/markdown-it-katex": "^1.0.0",
     "hexo": "^7.0.0",
     "hexo-blog-encrypt": "^3.1.9",
     "hexo-butterfly-tag-plugins-plus": "^1.0.17",
@@ -25,14 +23,14 @@
     "hexo-generator-tag": "^2.0.0",
     "hexo-neat": "^1.0.9",
     "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-markdown-it-plus": "^1.0.6",
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-theme-stellar": "^1.27.0",
-    "hexo-wordcount": "^6.0.1"
-  },
-  "scripts": {
-    "build": "hexo generate"
+    "hexo-wordcount": "^6.0.1",
+    "i": "^0.3.7",
+    "npm": "^10.5.0"
   }
 }
