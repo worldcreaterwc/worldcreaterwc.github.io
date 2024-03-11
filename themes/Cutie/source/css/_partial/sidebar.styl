@@ -1,0 +1,105 @@
+.sidebar {
+    position: fixed;
+    overflow-y: auto;
+    width: $sidebar-width-1;
+    height: 100%;
+    background: var(--sidebar-bg-color);
+    border-right: 1px solid var(--sidebar-border-color);
+    box-sizing: border-box;
+    transition: 0.6s all;
+    z-index: $sidebar-z-index;
+
+    .sidebar-author {
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .sidebar-list-container {
+        padding: 7%;
+        max-height: 100%;
+    }
+
+    .sidebar-footer {
+        margin: $sidebar-fmargin;
+        position: fixed;
+        width: $sidebar-f-width;
+        bottom: 0px;
+        background: var(--sidebar-footer-bg-color);
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-around;
+        border-radius: 8px;
+        box-shadow: 0 0 5px var(--sidebar-footer-border-color);
+        .item { 
+            text-align: center;
+            cursor: pointer;
+        }
+        *{ color: var(--sidebar-footer-color);}
+    }
+
+    .mini-text {
+        color: var(--sidebar-text-mini-text-color);
+        font-size: $sidebar-mini-fs;
+        font-weight: 500;
+    }
+
+    .list-group-item,.list-group-item-current {
+        border-radius: 10px;
+        padding: 10px 15px;
+        transition: 0.6s all;
+        background: var(--sidebar-list-group-item-bg-color);
+        display: flex;
+        justify-content: space-between;
+
+        div {color: var(--sidebar-list-group-item-color);}
+    }
+
+    .list-group-item {
+        &:hover,&:focus {
+            background: var(--sidebar-list-group-item-hover-bg-color);
+            div {color: var(--sidebar-list-group-item-hover-color);}
+        }
+    }
+
+    .list-group-item-current {
+        background: var(--sidebar-list-group-item-current-bg-color);
+        div {color: var(--sidebar-list-group-item-current-color);}
+    }
+
+    .badge {
+        color: var(--sidebar-badge-color) !important;
+        background: var(--sidebar-badge-bg-color);
+    }
+}
+
+.fake-sidebar {
+    width: $sidebar-width-1;
+    height: 100%;
+}
+
+@media screen and (max-width: $width-1) {
+    .sidebar,.fake-sidebar {width: $sidebar-width-2;}
+    .sidebar-footer {width: calc-width($sidebar-width-2,2*$sidebar-fmargin) !important;}
+}
+
+@media screen and (max-width: $width-2) {
+    .sidebar,.fake-sidebar {width: $sidebar-width-3;}
+    .sidebar-footer {width: calc-width($sidebar-width-3,2*$sidebar-fmargin) !important;}
+}
+
+@media screen and (max-width: $width-3) {
+    .sidebar,.fake-sidebar {
+        float: left;
+        width: $sidebar-width-4;
+        margin-left: $sidebar-width-n;
+    }
+    .sidebar-display {
+        margin-left: 0;
+    }
+    .sidebar-footer {width: calc-width($sidebar-width-4,2*$sidebar-fmargin) !important;}
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}

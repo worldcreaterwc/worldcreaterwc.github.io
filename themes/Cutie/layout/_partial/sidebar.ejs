@@ -1,0 +1,45 @@
+<div class="sidebar">
+  <div class="avatar-container">
+  	<img src="<%- theme.in_cdn %><%- theme.avatar.url %>" class="avatar <%- theme.avatar.effect %>" />
+  </div>
+
+  <div class="sidebar-author">
+    <%- config.author %><br />
+    <span class="mini-text"><%- theme.short_des %></span>
+  </div>
+
+  <div class="sidebar-list-container">
+    <div style="height: 10px;"></div>
+  	<% for (name in theme.Menu) { %>
+      <% var classname = "list-group-item"; %>
+      <% if(url_for(page.path)==url_for(theme.Menu[name])){classname = "list-group-item-current";} %>
+  	  <a class="<%- classname %>" href="<%- url_for(theme.Menu[name]) %>"><div><i class="fa <%- theme.icon[name] %> fa-fw"></i>&nbsp; <%- __('Menu.' + name) %></div>
+      <div class="badge">
+        <% if(theme.sidebar_num){ %>
+          <% if(name=="Archives"){ %>
+  	    	  <%- site.posts.length %>
+          <% }else if(name=="Tags"){ %>
+  	    	  <%- site.tags.length %>
+          <% }else if(name=="Categories"){ %>
+  	    	  <%- site.categories.length %>
+          <% }else{}} %>
+      </div></a>
+    <% } %>
+    <div style="height: 200px;"></div>
+  </div>
+
+  <div class="sidebar-footer">
+  	<div class="item" id="back2Top" data-bs-toggle="tooltip" title="<%- __('B2T') %>">
+  		<i class="fa fa-arrow-circle-up"></i>
+  	</div>
+    <div class="item" id="back2Down" data-bs-toggle="tooltip" title="<%- __('B2D') %>">
+      <i class="fa fa-arrow-circle-down"></i>
+    </div>
+  	<div class="item" data-bs-toggle="tooltip" title="RSS">
+  		<a href="/atom.xml"><i class="fa fa-feed"></i></a>
+  	</div>
+  	<div class="item"  data-bs-toggle="tooltip" title="<%- __('Search') %>">
+  		<a href="<%- url_for(theme.Search) %>"><i class="fa <%- theme.icon.Search %>"></i></a>
+  	</div>
+  </div>
+</div>

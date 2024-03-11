@@ -1,0 +1,85 @@
+.mood-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+        margin: 0 0 2em;
+
+        img:first-child {
+            width: 60px;
+            height: 60px;
+            display: block;
+            border-radius: 100%;
+            position: absolute;
+            box-shadow: none;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:nth-child(4n) inner:before {
+            border-right-color: #70c3ff;
+        }
+        &:nth-child(4n) inner {
+            background: #70c3ff;
+        }
+        &:nth-child(4n-1) inner:before {
+            border-right-color: #7f8ea0;
+        }
+        &:nth-child(4n-1) inner {
+            background: #7f8ea0;
+        }
+        &:nth-child(4n-2) inner:before {
+            border-right-color: #89d04f;
+        }
+        &:nth-child(4n-2) inner {
+            background: #89d04f;
+        }
+    }
+
+    text {
+        padding-left: 5.2em;
+        color: #fff;
+        max-width: 100%;
+
+        inner {
+            position: relative;
+            padding: 0.8em;
+            background: #fd6a7f;
+            border-radius: 0.4em;
+            margin: .5em 0;
+
+            &:before {
+                content: "";
+                border-top: 2em solid transparent;
+                border-right: 4em solid #fd6a7f;
+                border-bottom: 2em solid transparent;
+                position: absolute;
+                left: -0.8em;
+                top: 0;
+                z-index: - $min-z-index;
+            }
+        }
+    }
+
+    info {
+        border-top: 0.18em dashed rgba(82, 82, 82, 0.38);
+        margin-top: 0.6em;
+        padding-top: 0.6em;
+    }
+
+    inner,text,info {display: block;}
+
+}/*From mkBlog*/
+
+@media screen and (max-width: $width-3) {
+	li {
+		img:first-child {
+        	width: 50px !important;
+        	height: 50px !important;
+    	}
+    	text {
+        	padding-left: 4.5em !important;
+    	}
+    }
+}

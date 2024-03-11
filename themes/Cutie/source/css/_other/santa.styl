@@ -1,0 +1,207 @@
+.santa-container,.natsuki-container {
+	z-index: $max-z-index - 1;
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+    cursor: pointer;
+}
+
+#natsuki2 {display: none;}
+
+.santa-container {
+
+.body {
+    color: #f91047;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1em;
+    height: 1em;
+    background: currentColor;
+    box-shadow: inset 0 -0.25em rgba(0,0,0,0.1);
+    border-radius: 50%;
+    transform-origin: center bottom;
+    animation: balance alternate infinite 2s ease-in-out;
+}
+ 
+.head {
+    font-size: .4em;
+    width: 1em;
+    height: 1.9em;
+    background: white;
+    border-radius: .5em;
+    transform: translateY(-1em);
+    position: relative;
+}
+ 
+.head::before {
+    content: '';
+    width: 1em;
+    height: .375em;
+    display: block;
+    background: #ff9876;
+    position: absolute;
+    left: 0;
+    top: .65em;
+}
+ 
+.ear {
+    background: #fc8363;
+    width: .1em;
+    height: .3em;
+    position: absolute;
+    top: .75em;
+}
+ 
+.ear:nth-of-type(1) {
+    border-radius: .05em 0 0 .05em;
+    left: -0.1em;
+}
+ 
+.ear:nth-of-type(2) {
+    border-radius: 0 .05em .05em 0;
+    right: -0.1em;
+}
+ 
+.hat {
+    content: '';
+    width: 1em;
+    height: .15em;
+    position: absolute;
+    transform: scale(1.1);
+    top: .5em;
+    left: 0;
+    background: white;
+}
+ 
+.hat::before {
+    content: '';
+    display: block;
+    width: 1em;
+    height: .5em;
+    background: #f91047;
+    border-radius: .5em .5em 0 0;
+    z-index: $max-z-index - 2;
+    position: absolute;
+    top: -0.5em;
+}
+ 
+.hat::after {
+    content: '';
+    width: .25em;
+    height: .25em;
+    display: block;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.72em;
+    right: 0;
+    box-shadow: -0.2em .2em 0 .12em rgba(0,0,0,0.2),-0.2em .2em 0 .12em #f91047;
+}
+ 
+.eye {
+    width: .12em;
+    height: .12em;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: .76em;
+    left: .2em;
+}
+ 
+.eye+.eye {
+    left: auto;
+    right: .2em;
+}
+ 
+.nose {
+    width: .12em;
+    height: .22em;
+    background: #f24c4c;
+    border-radius: 0 0 .12em .12em;
+    position: absolute;
+    top: .84em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+ 
+.mouth {
+    width: .18em;
+    height: .1em;
+    border-bottom-right-radius: 5vw;
+    border-bottom-left-radius: 5vw;
+    margin-top: .3em;
+    background: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: hohoho 4s linear forwards infinite;
+}
+}
+ 
+@-webkit-keyframes hohoho {
+    0%,10%,20%,40%,100% {
+        width: .18em;
+        height: .1em;
+        border-bottom-right-radius: 1vw;
+        border-bottom-left-radius: 1vw;
+    }
+ 
+    5%,15%,25%,35% {
+        width: .15em;
+        height: .2em;
+        border-radius: 50%;
+    }
+}
+ 
+@keyframes hohoho {
+    0%,10%,20%,40%,100% {
+        width: .18em;
+        height: .1em;
+        border-bottom-right-radius: 1vw;
+        border-bottom-left-radius: 1vw;
+    }
+ 
+    5%,15%,25%,35% {
+        width: .15em;
+        height: .2em;
+        border-radius: 50%;
+    }
+}
+ 
+@-webkit-keyframes balance {
+    from {transform: rotate(-4deg);}
+    to {transform: rotate(4deg);}
+}
+ 
+@keyframes balance {
+    from {transform: rotate(-4deg);}
+    to {transform: rotate(4deg);}
+}
+ 
+/*
+How to display:
+
+HTML:
+<div class="santa">
+    <div class="body">
+        <div class="head">
+            <div class="ear"></div>
+            <div class="ear"></div>
+            <div class="hat"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+</div>
+*/
+
+
+@keyframes natsuki {
+	0% {transform: translate(0px, 0px);}
+ 	50% {transform: translate(0px, -100px);}
+ 	100% {transform: translate(0px, 0px);}
+}

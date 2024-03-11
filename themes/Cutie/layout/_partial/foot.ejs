@@ -1,0 +1,16 @@
+<!-- It is not contained by Pjax. -->
+<% if(theme.meting.enable) { %>
+    <meting-js class="meting-js appear" fixed="ture" server="<%- theme.meting.server %>" type="<%- theme.meting.type %>" id="<%- theme.meting.id %>"></meting-js>
+<% } %>
+
+<script>
+    consolePrint();
+    HideIt();
+</script>
+
+<link rel="stylesheet" href="<%- theme.in_cdn %>/custom/custom.css">
+<script src="<%- theme.in_cdn %>/custom/custom.js"></script>
+
+<% if(theme.colored_eggs.hair) { %>
+	<script>AprilHair();</script>
+<% } %>

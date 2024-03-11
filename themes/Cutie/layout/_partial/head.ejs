@@ -1,0 +1,51 @@
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="msvalidate.01" content="A7B4DB5A7BF5E5C6E52E34BB024D6319" />
+  <meta name="description" content="<%- config.description %>">
+  <meta http-equiv='content-language' content='zh-cn'>
+  <title>
+  	<% if (page.current>1) { %>
+  	    <%- _p('Pages',page.current) %> |
+  	<% } %>
+
+    <% if(page.title){ %>
+  		<%- page.title %> |
+  	<% }else if(page.category){ %>
+  		<%- __('Menu.Categories') %> <%- page.category %> |
+  	<% }else if (page.tag) { %>
+  	  <%- __('Menu.Tags') %> <%- page.tag %> |
+  	<% }else if (page.archive) { %>
+  	  <%- __('Menu.Archives') %> |
+  	<% }else{} %>
+
+  	<%- config.title %>
+  </title>
+  <script src="<%- theme.out_cdn.js.jquery %>"></script>
+  <script src="<%- theme.out_cdn.js.anime %>"></script>
+  <script src="<%- theme.out_cdn.js.pjax %>"></script>
+  <script src="<%- theme.out_cdn.js.gitalk %>"></script>
+  <script src="<%- theme.out_cdn.js.highlight %>"></script>
+  <script src="<%- theme.out_cdn.js.sweetalert2 %>"></script>
+  <script src="<%- theme.out_cdn.js.sketch %>"></script>
+  <script src="<%- theme.out_cdn.js.bootstrap %>"></script>
+  <script src="<%- theme.out_cdn.js.aplayer %>"></script>
+  <script src="<%- theme.out_cdn.js.meting %>"></script>
+  <script src="<%- theme.out_cdn.js.tocbot %>"></script>
+  <script src="<%- theme.in_cdn %>/js/chaffle.js"></script>
+  <script src="<%- theme.in_cdn %>/js/main.js"></script>
+  <script src="<%- theme.in_cdn %>/js/search.js"></script>
+  <script src="<%- theme.in_cdn %>/js/initial.js"></script>
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.aplayer %>">
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.katex %>">
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.gitalk %>">
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.fontawesome %>">
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.highlight %>">
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.bootstrap %>">
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.tocbot %>">
+  <link rel="stylesheet" href="<%- theme.in_cdn %>/css/style.css">
+  <% for (name in theme.fonts) { %>
+     <link href="<%- theme.out_cdn.css.googlefont %>/css?family=<%- theme.fonts[name] %>" rel="stylesheet">
+  <% } %>
+</head>

@@ -1,0 +1,96 @@
+Paginator:
+  Prev: Prev
+  Next: Next
+  None: None
+
+Menu:
+  Home: Home
+  Archives: Archives
+  Tags: Tags
+  Categories: Categories
+  Mood: Mood
+  About: About
+  Message_board: MsgBoard
+  Links: Links
+  Settings: Settings
+  Say: Say
+
+Out_Search: Out-Site Search (Bing)
+Search: Search
+Search_text: Enter keywords to search for ...
+Search_pre: Wait a moment before you can In-Site Search.
+
+Topbar: Complain
+
+Posts:
+  Top: Pinned
+  Password: Encrypted
+  Share: Share to
+  Author: The author： 
+  Link: The link： 
+  Copyright: Copyright： 
+  Refresh: Last updated： 
+
+Archives:
+  Categories: There are the following articles under the category "%s".
+  Tags: There are the following articles with the tag "%s".
+  Archives: There are currently %d articles. Keep working hard.
+  Dates: There are the following articles which were written on this date.
+  ShowDates: Show dates
+
+Categories: There are currently %d categories.
+
+Tags: There are currently %d tags.
+
+Comments:
+  Unable: Comments are not enabled on this page!
+  Unopen: '%s does not enabled the comments!'
+
+Pages: Page %d
+
+Toolbar:
+  Random:
+    title: Random
+    subtitle: Recalling.
+  Refresh:
+    title: Updates
+    subtitle: Refreshing.
+  Another:
+    title: Something
+    subtitle: Interesting.
+    coloregg: Click me to edit this page!
+
+hitokoto: '%s said that everyone except her is strong!'
+
+Info:
+  name: Blog Information
+  count: Posts
+  update: Update
+  words: Words
+
+Post_Toc: Table of Contents
+
+Tag_Cloud: Tag Cloud
+
+Progress: 'Time has passed by '
+
+B2T: Top
+B2D: Down
+
+Hide: Hide sidebars
+
+Show: Show sidebars
+
+NoTitie: 'No Title'
+
+Settings:
+  Cookie: Using the settings page means that you have agreed to the use of Cookie in this blog.
+  Help: After the setting is completed, refreshing the page or leaving will take effects.
+  Color: Color Schemes Settings
+  Special: Special Effects
+  Others: Others
+  Toolhide: ToolBar Hide
+  DisVRecord: Signboard Hide
+  DisAplayer: Aplayer Hide
+  PageStr: Page stretching
+  Reset: Reset

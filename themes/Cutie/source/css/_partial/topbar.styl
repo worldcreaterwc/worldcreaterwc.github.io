@@ -1,0 +1,30 @@
+.topbar {
+	background: var(--topbar-bg-color);
+	box-shadow: 0 0 5px var(--topbar-shadow-color);
+	padding: 12px;
+	position: sticky; top: 0;
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	z-index: $topbar-z-index;
+	font-size: $topbar-fs;
+	
+	a { color: var(--topbar-link-color); }
+	.topbar-title { font-weight: 700; }
+	.topbar-menu { display: none; }
+	.topbar-title,.topbar-comments,.topbar-menu { 
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+@media screen and (max-width: $width-3) {
+	.topbar {
+		.topbar-menu {
+			display: block !important;
+		}
+   		.search {
+    	    display: none !important;
+    	}
+	}
+}

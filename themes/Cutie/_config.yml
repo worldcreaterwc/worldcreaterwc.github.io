@@ -1,0 +1,367 @@
+#! ---------------------------------------------------------------
+#! WARNING THIS YAML
+#! IS IN CHINESE!
+#! ---------------------------------------------------------------
+
+
+
+# I 侧边栏菜单
+#
+# 填写链接。例如，`http://test.com/path/to/pages`，你应当填写 `path/to/pages/index.html`。
+# 无 "/index.html" 后缀会阻止 Pjax。
+# 记得在 II 菜单图标 填写它的 fontawesome icon。
+# 菜单内容任意增删。如果要增，可以仿照格式继续填写，另外需要在 language 文件夹下增加菜单名称翻译。
+
+# Menu 内的内容会显示在侧边栏。
+Menu:
+  Home: index.html
+  Archives: archives/index.html
+  Tags: tags/index.html
+  Categories: categories/index.html
+  Mood: somepage/mood/index.html
+  About: somepage/about/index.html
+  Message_board: somepage/chat/index.html
+  Links: somepage/link/index.html
+  Settings: somepage/settings/index.html
+
+# 搜索页面的链接。
+Search: somepage/search/index.html
+
+
+
+# II 菜单图标
+#
+# 使用 fontawesome 图标。链接：http://www.fontawesome.com.cn。
+
+icon:
+  Home: fa-home
+  Archives: fa-tasks
+  Tags: fa-tags
+  Categories: fa-th-large
+  Mood: fa-photo
+  About: fa-user-o
+  Message_board: fa-commenting-o
+  Links: fa-link
+  Settings: fa-cog
+  Search: fa-search
+
+
+
+# III 评论
+#
+# 评论功能在不包含 "discomments: true" 的页面开启。
+# 支持三个评论系统。最多同时启用一个。
+
+comments:
+  enable: true # 直接去掉评论的框体
+  # LiveRe（来必力）评论系统
+  # 从这里得到你的 uid。
+  # https://livere.com/insight/myCode
+  livere:
+    enable: false
+    uid: 
+
+  # Gitalk 评论系统
+  # https://github.com/gitalk/gitalk
+  gitalk:
+    enable: false
+    clientID: "''"
+    clientSecret: "''"
+    repo: "''"
+    owner: "''"
+    admin: "['']"
+    proxy: "''"
+
+  # Giscus 评论系统
+  # https://giscus.app/zh-CN
+  giscus:
+    enable: false
+    # 把它拆成这些选项，是为了支持 Pjax。
+    src: https://giscus.app/client.js
+    repo: 
+    repoid: 
+    category: 
+    categoryid: 
+    mapping: pathname
+    strict: 0
+    reactions_enabled: 1
+    emit_metadata: 0
+    input_position: top
+    theme: light
+    night_theme: dark # night 配色下的主题
+    lang: zh-CN
+    loading: lazy
+    crossorigin: anonymous
+  waline:
+    enable: false
+    serverurl: 
+    reaction: false #文章反应，参见https://waline.js.org/guide/features/reaction.html
+  twikoo:
+    enable: false
+    envid: 
+    lang: zh-CN # 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+
+Pageview_Counter: #浏览量功能
+  waline: # 参见https://waline.js.org/guide/features/pageview.html
+    enable: false
+    serverurl: 
+
+
+# IV 自适应
+#
+# 根据设定的屏幕宽度（单位都是 px）改变显示方式。
+
+responsive:
+  width_1: 1170
+  # 低于此数值，使文章区宽度减小。
+  width_2: 990
+  # 低于此数值，工具栏会被置于文章区下方。
+  width_3: 770
+  # 低于此数值，侧边栏会被隐藏。点击顶部栏的左侧图标弹出侧边栏。
+
+# 根据上面，整个自适应方式被划分为四个阶段。
+
+# 设定各个阶段侧边栏的宽度。
+sidebar_width:
+  width_1: 220
+  width_2: 220
+  width_3: 220
+  width_4: 250
+
+# 设定全阶段侧边栏的底部栏的 margin。
+sidebar_footer_margin: 8
+
+# 设定前两个阶段工具栏的宽度。
+toolbar_width:
+  width_1: 240
+  width_2: 240
+
+
+
+# V 首页提示
+
+site_info:
+  enable: root   # 可以取这些值：none | root | all。默认值是 none。
+                 # root：只会在博客首页显示；
+                 # all：在所有页面显示。
+  text: <i class='fa fa-volume-up'></i> 本博客更改评论系统为 Giscus。 # "<i class='fa fa-volume-up'></i> 欢迎来到 Yurchiu 的博客！希望我们能相互交流，共同进步～"
+  type: warning  # 可以取这些值：danger | warning | info | success。
+
+
+
+# VI 版权信息
+
+footer:          # 页脚版权信息。
+  left: '©2019-2023 <a href="https://github.com/yz-hs">Yurchiu</a>. All rights reserved.'
+                 # 请勿修改 right。如果是根据本主题进行二创主题，那么请
+                 # 注明是由本主题修改而成。此条件下可以修改 right。
+                 # 本主题采用 MIT 许可协议。
+  right: 'Theme <a href="https://github.com/yz-hs/cutie">Cutie</a>, by Yurchiu.'
+
+copyright:       # 文末版权信息。
+  enable: post   # 可以取这些值：all | post | disable。默认值是 disable。
+                 # all: 在每个页面末尾显示。
+                 # post: 只在每个博文末尾显示。
+                
+  statement: '本博客中所有原创文章除特别声明外，均允许规范转载，转载请注明出处。所有非原创文章，按照原作者要求转载。'
+
+
+
+# VII 博文摘要
+#
+# 在文章卡片中的摘要信息。
+
+excerpt:
+  mode: excerpt         # 可以取这些值：excerpt | noexcerpt。默认值是 excerpt。
+                        # excerpt: 如果博文源文件中含有“<!--more-->”，将会将它前面的内容作为摘要。
+                        # noexcerpt: 所有文章被认为不含有“<!--more-->”。
+
+  ifdefault: false      # 大前提：博文源文件中不含有“<!--more-->”。
+                        # true：展示“noexcerpt”内容。
+                        # false：展示博文的一部分。
+
+  display: html         # 可以取这些值：html | text。默认值是 text。
+                        # html: 仅当博文源文件中含有“<!--more-->”时，保留 html 标签。
+                        # text: 任何情况下不保留 html 标签。
+
+  noexcerpt: '<i class="fa fa-warning"></i> Yurchiu 没有为本文章提供摘要 qwq。可能 Yurchiu 太懒了，或本文章没法做摘要。'
+
+  length: 150   # 当展示博文的一部分时，展示的文本字符数。默认是 30。
+
+  # 注意：如果一篇博文源文件中不含有“<!--more-->”，而 display 值为 html 时，则效果与“display: text”相同。 
+
+
+
+# VIII 标签云
+#
+# 位于工具栏。
+
+tag_cloud:
+  enable: true         # 是否启用
+  color:               # 颜色渐变范围
+    from: "#fff"
+    to: "#fff"
+  font:                # 字体渐变范围（单位 px）
+    from: 14
+    to: 14
+
+
+
+# IX 字体
+#
+# https://fonts.googleapis.com/css?family=...
+
+# 引用的谷歌字体
+# 可以有多个。
+fonts:
+  - Montserrat
+  - Roboto+Mono
+
+# 字体家族
+font_family: "Montserrat,'Harmony_Regular',sans-serif"
+mono_font_family: "'Roboto Mono',sans-serif"
+
+
+
+# X Aplayer+Meting 底部播放器
+#
+# enable 选择 false，访客无法在博客的“设置”页面开启。
+meting:
+  enable: true
+  server: netease
+  type: playlist
+  id: 8524070964
+
+
+
+# XI 头像
+
+avatar:
+  url: /img/new-avatar.jpg
+  # 头像动效，可以取这些值：bounce | revolve | none，默认值是 none。
+  effect: revolve
+
+
+
+# XII 博客彩蛋
+#
+# 本部分选择 false 者，访客均无法在博客的“设置”页面开启。
+colored_eggs:
+  # 看板娘（？）
+  # 可以取这些值：santa | natsuki | none，默认值是 none。
+  type: natsuki
+  width: 120px                       # 人物大小。
+  time: 0.55s                        # 动画时间，仅对 natsuki 有用。
+  bezier: cubic-bezier(0, 0, 0, 1)   # 贝塞尔曲线，仅对 natsuki 有用。
+                                     # 对于 natsuki，可以在 source 文件夹中的 img 文件夹更改图片。
+
+  # 可用作愚人节彩蛋                            
+  reverse: false                     # 网页反转（只转一次）。
+  hair: false                        # 你的屏幕上有头发。
+
+
+
+# XIII 杂项
+
+# 下面三个选项，博客的“设置”页面没有对应的选项。
+#
+# 侧边栏是否显示标签个数等
+sidebar_num: true
+
+# 工具栏是否显示“博客信息”
+toolbar_info: true
+
+# 工具栏是否显示第三栏
+toolbar_third: true
+
+
+
+# 下面的一个选项，访客无法在博客的“设置”页面更改。
+#
+# 工具栏是否显示
+toolbar_enable: true
+
+
+
+# 下面的三个选项，访客可以在博客的“设置”页面更改。
+#
+# 博客默认配色
+# 可以取这些值：std | white | night | none，默认值是 std。 "none" 非常特殊。
+color_schemes: white
+
+# 博客默认特殊效果
+# 可以取这些值：none | grayscale | invert | blur，默认值是 none。
+special: none
+
+# 拉伸页面
+# 将博客界面两端的空隙填充
+stretch: false
+
+# 在博客的“设置”页面中，存在一些本配置文件中没有的设置。
+
+
+
+# 你的 GitHub 用户名，用于某些链接
+github_name: yz-hs
+
+# 图片背景卡片的高度默认值
+imgcard_h: 30em
+
+# Jsdelivr 提供的加速 CDN，可选。
+# 对本主题中的 css、js、img、custom 文件夹中的静态资源进行加速。
+# https://cdn.jsdelivr.net/gh/[you]/[yourBlog]
+in_cdn: 
+
+# 自我简述
+short_des: "An AFO whker."
+
+# 背景图片地址
+bg_url: /img/new-bgp.png
+nightbg_url: /img/night-bgp.jpg # night 配色下的背景图片
+
+# 时间格式
+# http://momentjs.cn/docs/#/parsing/string-format/
+time_format: "YYYY-MM-DD, HH:mm:ss"
+
+# 博客界面透明度，取值为属于区间 [0,1] 的实数。
+opacity: 0.9
+night_opacity: 0.85
+
+# 图片无法加载，会用它替换。
+img_default: /img/error.jpg
+
+# 工具栏“随机文章”等的显示文章个数。
+toolbar_amount: 7
+
+
+
+#! ---------------------------------------------------------------
+#! DO NOT EDIT THE FOLLOWING SETTINGS
+#! UNLESS YOU KNOW WHAT YOU ARE DOING
+#! ---------------------------------------------------------------
+
+
+
+# 本主题使用的 CDN。
+out_cdn:
+  css:
+    katex: https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.6/katex.min.css
+    gitalk: https://unpkg.com/gitalk/dist/gitalk.css
+    googlefont: https://fonts.googleapis.com
+    highlight: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/vs2015.min.css
+    fontawesome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css
+    bootstrap: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css
+    aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+    tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css
+  js:
+    jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
+    anime: https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js
+    pjax: https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js
+    gitalk: https://unpkg.com/gitalk/dist/gitalk.min.js
+    highlight: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js
+    sweetalert2: https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.all.min.js
+    sketch: https://cdn.staticfile.org/sketch.js/1.0/sketch.min.js
+    bootstrap: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js
+    aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+    meting: https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js
+    tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js

@@ -1,0 +1,80 @@
+hexo-config-uq(config)
+    $ret = hexo-config(config)
+    $ret = unquote($ret)
+    return $ret
+
+@import "_variable/main";
+@import "_other/main";
+@import "_partial/main";
+
+body {
+    opacity: hexo-config('opacity');
+	color: var(--text-color);
+	font-family: hexo-config-uq('font_family');
+	font-size: $default-fs;
+    font-weight: 500 !important;
+	background-attachment: fixed;
+  	background-repeat: no-repeat;
+  	background-position: 50% 50%;
+  	background-size: cover;
+  	margin: 0 auto;
+	box-shadow: 0 0 40px var(--body-shadow-color);
+	height: auto;
+	width: $width-1;
+	line-height: 140%;
+	letter-spacing: 1.3px;
+}
+
+*::selection {
+	background: var(--selection-bg-color); 
+	color: var(--selection-color);
+}
+
+.article {
+	width: $article-width-1;
+	min-height: 800px;
+	table-layout: fixed;
+    display: table;
+	background: var(--post-bg-color);
+}
+
+.vertical {
+	vertical-align: top;
+    display: table-cell;
+}
+
+.fa-border {
+	border-color: var(--fa-border-color) !important;
+}
+
+.article-stretch {width: 100% !important;}
+
+.appear {display: block !important;}
+
+.katex-block {overflow-x: auto;}
+
+@media screen and (max-width: $width-1) {
+    .article {width: $article-width-2;}
+    body {width: $width-2;}
+}
+
+@media screen and (max-width: $width-2) {
+    .article-stretch {width: auto !important;}
+    .article {
+        width: $article-width-3;
+        display: block;
+        margin-left: $sidebar-width-3;
+    }
+    .vertical {display: block;}
+	body {width: $width-3;}
+}
+
+@media screen and (max-width: $width-3) {
+    .article {
+        margin: auto;
+        width: $article-width-4;
+        display: block;
+    }
+    .santa-container,.natsuki-container,meting-js {display: none;}
+    body {width: 100%;}
+}

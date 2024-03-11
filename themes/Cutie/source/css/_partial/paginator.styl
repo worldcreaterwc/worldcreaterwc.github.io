@@ -1,0 +1,31 @@
+.paginator {
+    padding: 70px 0;
+    text-align: center;
+    background: var(--paginator-padding-color);
+
+    .page-number,.space,.prev,.next {
+        border: 1px solid var(--paginator-border-color);
+        border-right: none;
+        padding: 8px 13px;
+        background: var(--paginator-bg-color);
+        color: var(--paginator-color);
+    }
+
+    .page-number:hover,.prev:hover,.next:hover {
+        color: var(--paginator-hover-color);
+        background: var(--paginator-hover-bg-color);
+    }
+
+    .current,.current:hover {
+        color: var(--paginator-current-color);
+        background: var(--paginator-current-bg-color);
+    }
+
+    &>*:first-child {
+        border-radius: 10px 0px 0px 10px;
+    }
+    &>*:last-child {
+        border-radius: 0px 10px 10px 0px;
+        border-right: 1px solid var(--paginator-border-color);
+    }
+}

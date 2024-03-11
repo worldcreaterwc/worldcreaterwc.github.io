@@ -1,0 +1,24 @@
+<div class="header">
+  	<h1 class="title">
+  	    <%- __('Search') %>
+  	</h1>
+  	<div class="meta">
+  	    <%- __('Search_text') %>
+  	</div>
+</div>
+<div class="post-text">
+	<script type="text/javascript">
+      var search_path = "<%- theme.in_cdn %><%- config.search.path %>";
+      if (search_path == "<%- theme.in_cdn %>") search_path = "/search.xml";
+      var path = search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+  <p><%- __('Search_pre') %></p>
+	<form class="d-flex">
+    	<input id="local-search-input" class="form-control me-2 pe-4" type="search" placeholder="<%- __('Search_text') %>" aria-label="Search">
+      <button type="button" data-bs-toggle="tooltip" title="<%- __('Out_Search') %>" class="btn btn-secondary" onclick="window.open('https://cn.bing.com/search?q='+document.getElementById('local-search-input').value+'+site%3A<%- config.url %>');"><i class="fa fa-search"></i></button>
+	</form>
+
+	<br />
+	<div id="local-search-result" style="word-break: break-all;"></div>
+</div>

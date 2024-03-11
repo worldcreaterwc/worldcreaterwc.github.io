@@ -1,0 +1,34 @@
+<div class="footer">
+  <p class="text-left"><%- theme.footer.left %></p>
+  <p class="text-right"><%- theme.footer.right %></p>
+</div>
+
+<%- partial('./animation') %>
+
+<% if(theme.colored_eggs.reverse) { %>
+    <script>Fool();</script>
+<% }if(theme.special){ %>
+    <script>if(!readData("special")) $("html").addClass("<%- theme.special %>");</script>
+<% }if(theme.stretch){ %>
+    <script>
+    	if(readData("stretch")!=2) Stretch();
+	</script>
+<% } %>
+
+<script>
+    if(!readData("color"))
+        $("html").addClass("color-<%- theme.color_schemes %>");
+
+    if(!<%- theme.toolbar_enable %>)
+        $(".toolbar").hide();
+
+    if(readData("color")==4 || "<%- theme.color_schemes %>"=="night"&&!readData("color")){
+        $("body").css("opacity","<%- theme.night_opacity %>");
+        $("body").css("background-image","url(<%- theme.in_cdn %><%- theme.nightbg_url %>)");
+        window.document.documentElement.setAttribute( "data-theme", "dark" );
+    }
+
+    $('img').attr("onerror","this.src='<%- theme.in_cdn %><%- theme.img_default %>';this.onerror=null");
+
+    initial();
+</script>
