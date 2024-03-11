@@ -144,7 +144,7 @@ site_info:
   enable: root   # 可以取这些值：none | root | all。默认值是 none。
                  # root：只会在博客首页显示；
                  # all：在所有页面显示。
-  text: <i class='fa fa-volume-up'></i> 本博客更改评论系统为 Giscus。 # "<i class='fa fa-volume-up'></i> 欢迎来到 Yurchiu 的博客！希望我们能相互交流，共同进步～"
+  text: "你好，欢迎"
   type: warning  # 可以取这些值：danger | warning | info | success。
 
 
@@ -227,7 +227,7 @@ mono_font_family: "'Roboto Mono',sans-serif"
 #
 # enable 选择 false，访客无法在博客的“设置”页面开启。
 meting:
-  enable: true
+  enable: false
   server: netease
   type: playlist
   id: 8524070964
@@ -237,9 +237,9 @@ meting:
 # XI 头像
 
 avatar:
-  url: /img/new-avatar.jpg
+  url: /img/githead.png
   # 头像动效，可以取这些值：bounce | revolve | none，默认值是 none。
-  effect: revolve
+  effect: none
 
 
 
@@ -247,9 +247,10 @@ avatar:
 #
 # 本部分选择 false 者，访客均无法在博客的“设置”页面开启。
 colored_eggs:
+  # enable: false
   # 看板娘（？）
   # 可以取这些值：santa | natsuki | none，默认值是 none。
-  type: natsuki
+  type: none
   width: 120px                       # 人物大小。
   time: 0.55s                        # 动画时间，仅对 natsuki 有用。
   bezier: cubic-bezier(0, 0, 0, 1)   # 贝塞尔曲线，仅对 natsuki 有用。
@@ -302,7 +303,7 @@ stretch: false
 
 
 # 你的 GitHub 用户名，用于某些链接
-github_name: yz-hs
+github_name: worldcreaterwc
 
 # 图片背景卡片的高度默认值
 imgcard_h: 30em
@@ -313,7 +314,7 @@ imgcard_h: 30em
 in_cdn: 
 
 # 自我简述
-short_des: "An AFO whker."
+short_des: "一名很菜的 OIer"
 
 # 背景图片地址
 bg_url: /img/new-bgp.png
@@ -324,7 +325,7 @@ nightbg_url: /img/night-bgp.jpg # night 配色下的背景图片
 time_format: "YYYY-MM-DD, HH:mm:ss"
 
 # 博客界面透明度，取值为属于区间 [0,1] 的实数。
-opacity: 0.9
+opacity: 0.85
 night_opacity: 0.85
 
 # 图片无法加载，会用它替换。
