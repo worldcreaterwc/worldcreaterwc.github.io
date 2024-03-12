@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: 'World_Creater‘s Blog'
+subtitle: 'qwq'
 description: ''
 keywords:
 author: World Creater
@@ -110,8 +110,8 @@ markdown_it_plus:
     linkify: true
     typographer: true
     quotes: '“”‘’'
-  # plugins:
-  #   - "@neilsustc/markdown-it-katex"
+  plugins:
+    - "@neilsustc/markdown-it-katex"
   anchors:  
     level: 2
     collisionSuffix: 'v'
