@@ -16,12 +16,12 @@
 Menu:
   Home: index.html
   Archives: archives/index.html
-  Tags: tags/index.html
-  Categories: categories/index.html
-  Mood: somepage/mood/index.html
-  About: somepage/about/index.html
-  Message_board: somepage/chat/index.html
-  Links: somepage/link/index.html
+  Tags: somepage/tags/index.html
+  Categories: somepage/categories/index.html
+  # Mood: somepage/mood/index.html
+  # About: somepage/about/index.html
+  # Message_board: somepage/chat/index.html
+  # Links: somepage/link/index.html
   Settings: somepage/settings/index.html
 
 # 搜索页面的链接。
@@ -152,7 +152,7 @@ site_info:
 # VI 版权信息
 
 footer:          # 页脚版权信息。
-  left: '©2019-2023 <a href="https://github.com/yz-hs">Yurchiu</a>. All rights reserved.'
+  left: '©2024-2024 <a href="https://github.com/worldcreaterwc">WorldCreater</a>. All rights reserved.'
                  # 请勿修改 right。如果是根据本主题进行二创主题，那么请
                  # 注明是由本主题修改而成。此条件下可以修改 right。
                  # 本主题采用 MIT 许可协议。
