@@ -16,16 +16,16 @@
 Menu:
   Home: index.html
   Archives: archives/index.html
-  Tags: somepage/tags/index.html
-  Categories: somepage/categories/index.html
+  Tags: somepage/tags.html
+  Categories: somepage/categories.html
   # Mood: somepage/mood/index.html
   # About: somepage/about/index.html
   # Message_board: somepage/chat/index.html
   # Links: somepage/link/index.html
-  Settings: somepage/settings/index.html
+  Settings: somepage/settings.html
 
 # 搜索页面的链接。
-Search: somepage/search/index.html
+Search: somepage/search.html
 
 
 
@@ -366,3 +366,20 @@ out_cdn:
     aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
     meting: https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js
     tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js
+markdown_it_plus:
+  render:
+    html: true            
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - "@neilsustc/markdown-it-katex"
+  anchors:  
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSide: 'left'
+    permalinkSymbol: ¶
