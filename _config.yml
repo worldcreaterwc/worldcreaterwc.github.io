@@ -111,7 +111,9 @@ markdown_it_plus:
     typographer: true
     quotes: '“”‘’'
   plugins:
-    - "@neilsustc/markdown-it-katex"
+    - plugin: 
+      name: "@neilsustc/markdown-it-katex"
+      enable: true
   anchors:  
     level: 2
     collisionSuffix: 'v'
@@ -119,3 +121,13 @@ markdown_it_plus:
     permalinkClass: header-anchor
     permalinkSide: 'left'
     permalinkSymbol: ¶
+# # Security
+encrypt: # hexo-blog-encrypt
+  abstract: 该内容被密码保护。
+  message: 请输入密码。
+  tags:
+  - {name: 校内, password: sxyzoiers}
+  theme: xray
+  wrong_pass_message: 抱歉，这个密码看着不太对，请再试试。
+  wrong_hash_message: 抱歉，这个文章不能被校验，不过您还是能看看解密后的内容。
+ 
