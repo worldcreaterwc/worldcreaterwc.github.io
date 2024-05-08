@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@neilsustc/markdown-it-katex": "^1.0.0",
-    "hexo": "^7.0.0",
+    "hexo": "^7.2.0",
     "hexo-blog-encrypt": "^3.1.9",
     "hexo-butterfly-tag-plugins-plus": "^1.0.17",
     "hexo-deployer-git": "^4.0.0",
