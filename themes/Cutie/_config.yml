@@ -296,7 +296,7 @@ special: none
 
 # 拉伸页面
 # 将博客界面两端的空隙填充
-stretch: false
+stretch: true
 
 # 在博客的“设置”页面中，存在一些本配置文件中没有的设置。
 
