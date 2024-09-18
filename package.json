@@ -6,7 +6,7 @@
     "build": "hexo generate"
   },
   "hexo": {
-    "version": "7.1.1"
+    "version": "7.3.0"
   },
   "dependencies": {
     "@neilsustc/markdown-it-katex": "^1.0.0",
