@@ -10,6 +10,8 @@ tags:
 
 我有练功症。
 
+WKHALJHLAIWHFLKAWF
+
 # 问题描述
 
 对于序列 $a$ 和每个 $r$，计算一个最大的 $l$ 使得 $w(l,r)=1$，记作 $f(r)=l$。
